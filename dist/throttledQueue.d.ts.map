@@ -1,1 +1,1 @@
-{"version":3,"file":"throttledQueue.d.ts","sourceRoot":"","sources":["../src/throttledQueue.ts"],"names":[],"mappings":"AAAA,wBAAgB,cAAc,CAC5B,sBAAsB,EAAE,MAAM,EAC9B,QAAQ,EAAE,MAAM,EAChB,YAAY,UAAQ,6EA4DrB;AACD,eAAe,cAAc,CAAC"}
+{"version":3,"file":"throttledQueue.d.ts","sourceRoot":"","sources":["../src/throttledQueue.ts"],"names":[],"mappings":"AAAA,wBAAgB,cAAc,CAC5B,sBAAsB,EAAE,MAAM,EAC9B,QAAQ,EAAE,MAAM,EAChB,YAAY,UAAQ;;;EAgErB;AACD,eAAe,cAAc,CAAC"}

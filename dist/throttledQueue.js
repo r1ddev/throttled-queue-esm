@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.throttledQueue = void 0;
-function throttledQueue(maxRequestsPerInterval, interval, evenlySpaced) {
+export function throttledQueue(maxRequestsPerInterval, interval, evenlySpaced) {
     if (evenlySpaced === void 0) { evenlySpaced = false; }
     /**
      * If all requests should be evenly spaced, adjust to suit.
@@ -44,7 +41,7 @@ function throttledQueue(maxRequestsPerInterval, interval, evenlySpaced) {
             timeout = undefined;
         }
     };
-    return function (fn) { return new Promise(function (resolve, reject) {
+    var add = function (fn) { return new Promise(function (resolve, reject) {
         var callback = function () { return Promise.resolve().then(fn).then(resolve).catch(reject); };
         var now = Date.now();
         if (timeout === undefined && (now - lastIntervalStart) > interval) {
@@ -61,7 +58,8 @@ function throttledQueue(maxRequestsPerInterval, interval, evenlySpaced) {
             }
         }
     }); };
+    add.getQueueSize = function () { return queue.length; };
+    return add;
 }
-exports.throttledQueue = throttledQueue;
-exports.default = throttledQueue;
+export default throttledQueue;
 //# sourceMappingURL=throttledQueue.js.map
