@@ -1,4 +1,4 @@
-function throttledQueue(
+export function throttledQueue(
   maxRequestsPerInterval: number,
   interval: number,
   evenlySpaced = false,
@@ -62,6 +62,4 @@ function throttledQueue(
     },
   );
 }
-module.exports = throttledQueue;
 export default throttledQueue;
-

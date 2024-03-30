@@ -1,9 +1,9 @@
 {
+  "type": "module",
   "name": "throttled-queue",
   "version": "2.1.4",
   "description": "Throttles arbitrary code to execute a maximum number of times per interval. Best for making throttled API requests.",
-  "main": "dist/throttledQueue.js",
-  "types": "dist/throttledQueue.d.ts",
+  "exports": "./dist/throttledQueue.js",
   "files": ["dist/*", "src/*"],
   "scripts": {
     "prepublishOnly": "tsc",
@@ -47,5 +47,8 @@
     "mocha": "^9.1.3",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
