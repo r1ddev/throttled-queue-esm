@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "throttled-queue",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Throttles arbitrary code to execute a maximum number of times per interval. Best for making throttled API requests.",
   "exports": "./dist/throttledQueue.js",
   "files": ["dist/*", "src/*"],

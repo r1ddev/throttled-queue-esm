@@ -43,7 +43,7 @@ export function throttledQueue(
     }
   };
 
-  return <Return = unknown>(fn: () => Promise<Return> | Return): Promise<Return> => new Promise<Return>(
+  const add = <Return = unknown>(fn: () => Promise<Return> | Return): Promise<Return> => new Promise<Return>(
     (resolve, reject) => {
       const callback = () => Promise.resolve().then(fn).then(resolve).catch(reject);
       const now = Date.now();
@@ -61,5 +61,9 @@ export function throttledQueue(
       }
     },
   );
+
+  add.getQueueSize = () => queue.length;
+
+  return add;
 }
 export default throttledQueue;
