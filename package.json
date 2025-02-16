@@ -4,6 +4,7 @@
   "version": "2.1.5",
   "description": "Throttles arbitrary code to execute a maximum number of times per interval. Best for making throttled API requests.",
   "exports": "./dist/throttledQueue.js",
+  "types": "dist/throttledQueue.d.ts",
   "files": ["dist/*", "src/*"],
   "scripts": {
     "prepublishOnly": "tsc",
